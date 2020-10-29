@@ -1,14 +1,10 @@
-html {
-  scroll-padding-top: 70px; /* height of sticky header */
-}
-
 body {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
 
 .main-header {
-    text-align: center;
+    text-align: left;
     position: fixed;
     top=0;
     width: 100%;
@@ -22,7 +18,7 @@ body {
 nav {
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
     background-color: #222;
 }
 
@@ -40,7 +36,6 @@ footer {
     color: #fff;
     background-color: #333;
     text-align: center;
-    clear: both;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -54,13 +49,13 @@ footer {
     *display:inline;
 }
 
-.login-list > li{
+.signup-list > li{
     padding: 0.5%;
     align: center;
     *display:inline;
 }
 
-.pagelink-button {
+.custom-button {
     background-color: #555;
     border: none;
     color: white;
@@ -73,17 +68,13 @@ footer {
     font-size: 16px;
 }
 
-.pagelink-button:hover {
+.custom-button:hover {
     background: #666;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: all 0.4s ease 0s;
 }
 
-.logo-section {
-}
-
 .logo {
-    display: inline-block;
     float: left;
 }
 
@@ -97,9 +88,8 @@ footer {
 }
 
 .date {
-    display: inline-block;
-    text-align: left;
     float: left;
+    font-size: 30px;
 }
 
 .signup-form {
@@ -109,14 +99,14 @@ footer {
     overflow-y:auto;
 }
 
-input[type=text], input[type="password"] {
+input[type=text], input[type=password], input[type=file] {
     padding:5px;
     border:2px solid #ccc;
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
-input[type=text]:hover, input[type="password"]:hover {
+input[type=text]:hover, input[type=password]:hover, input[type=file]:hover {
     border-color:#444;
 }
 
