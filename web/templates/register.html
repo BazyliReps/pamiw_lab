@@ -1,0 +1,14 @@
+{% include "header.html" %}
+{% from "_formhelpers.html" import render_field %}
+
+<form class="custom-form" method=post>
+    {% include "messages.html" %}
+    <dl>
+        {{ render_field(form.username) }}
+        {{ render_field(form.email) }}
+        {{ render_field(form.address) }}
+        {{ render_field(form.password) }}
+        {{ render_field(form.confirm) }}
+    </dl>
+    <p><input type=submit value=Register>
+</form>

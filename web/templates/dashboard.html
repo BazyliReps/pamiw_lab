@@ -1,0 +1,27 @@
+{% include "header.html" %}
+{% if tokens and (tokens is defined) %}
+<h3>Paczki</h3>
+<ol>
+    {% for package, token in tokens.items() %}
+    <li>
+        <a href="/package/{{ package }}?token={{ token }}">{{ package }}</a>
+    </li>
+    {% endfor %}
+</ol>
+{% else %}
+Nie masz paczek skojarzonych z kontem
+{% endif %}
+{% from "_formhelpers.html" import render_field %}
+
+<form class="custom-form" method=post>
+    {% include "messages.html" %}
+    <h3>Dodawanie paczek</h3>
+    <dl>
+        {{ render_field(form.recipient) }}
+        {{ render_field(form.mailbox_address) }}
+        {{ render_field(form.package_size) }}
+    </dl>
+    <p><input type=submit class="custom-button" value='Dodaj Paczkę'>
+</form>
+
+{% include "footer.html" %}
