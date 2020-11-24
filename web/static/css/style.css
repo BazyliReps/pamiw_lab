@@ -5,8 +5,6 @@ body {
 
 .main-header {
     text-align: left;
-    position: fixed;
-    top=0;
     width: 100%;
     z-index: 999;
     margin-top: -2%;
@@ -25,7 +23,7 @@ nav {
 .index-text {
     color: #444;
     text-align: left;
-    padding-top: 13%;
+    padding-top: 3%;
     padding-bottom: 5%;
     padding-left: 15%;
     padding-right: 15%;
@@ -42,6 +40,10 @@ footer {
     z-index: 999;
 }
 
+.messages {
+    color: #f00;
+    background-color: #fff
+}
 
 .horizontal-list > li  {
     display: inline-block;
@@ -92,8 +94,8 @@ footer {
     font-size: 30px;
 }
 
-.signup-form {
-    padding-top: 13%;
+.custom-form {
+    padding-top: 3%;
     color: #444;
     text-align: left;
     overflow-y:auto;
